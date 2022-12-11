@@ -1,17 +1,13 @@
 # frozen_string_literal: true
 
-# Description of Main
+# Description of Automobile
 class Automobile
   attr_reader :year_of_issue, :mileage
 
-  def initialize(year_of_issue: 2017, mileage: 100000)
+  def initialize(year_of_issue: 2017, mileage: 100_000)
     @year_of_issue = year_of_issue
     @mileage = mileage
   end
-
-  # def print_info_preview
-  #   puts
-  # end
 
   def print_info
     puts "Информация об экземпляре класса #{self.class}"
@@ -36,15 +32,17 @@ class Automobile
   end
 
   private
+
   def average_mileage
     @mileage / (Time.new.year - @year_of_issue).to_f
   end
 end
 
-class Automobile_expanded < Automobile
+# Description of AutomobileExpanded
+class AutomobileExpanded < Automobile
   attr_reader :number, :car_model, :owner_name
 
-  def initialize(number: 'а123бв06', car_model: :bmw, owner_fam: 'Owner\'s name', year_of_issue: 2017, mileage: 100000)
+  def initialize(number: :а123бв06, car_model: :bmw, owner_fam: 'Owner\'s name', year_of_issue: 2017, mileage: 100_000)
     super(year_of_issue: year_of_issue, mileage: mileage)
     @number = number
     @car_model = car_model
@@ -62,7 +60,7 @@ class Automobile_expanded < Automobile
   end
 
   def print_number
-    puts "\033[3;4;36m#{@number}\033[0m"
+    puts "\033[3;4;36m#{@number.to_s}\033[0m"
   end
 
   def print_car_model

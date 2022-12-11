@@ -1,0 +1,8 @@
+detectors:
+  TooManyStatements:
+    max_statements: 20
+exclude_paths:
+  - 'bin/**/*'
+  - 'spec/**/*'
+  - 'vendor/**/*'
+  - '**/Gemfile'
