@@ -60,7 +60,7 @@ class AutomobileExpanded < Automobile
   end
 
   def print_number
-    puts "\033[3;4;36m#{@number.to_s}\033[0m"
+    puts "\033[3;4;36m#{@number}\033[0m"
   end
 
   def print_car_model

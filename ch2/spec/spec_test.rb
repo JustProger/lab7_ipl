@@ -3,6 +3,13 @@
 require 'main'
 
 RSpec.describe AutomobileExpanded do
+  it 'should be instance of class' do
+    auto = Automobile.new
+    auto.class.to_s.should == 'Automobile'
+    superauto = AutomobileExpanded.new
+    superauto.class.to_s.should == 'AutomobileExpanded'
+  end
+
   it 'should inherit behavior from Automobile' do
     expect(AutomobileExpanded.superclass).to eq(Automobile)
   end
