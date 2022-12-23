@@ -12,6 +12,7 @@ RSpec.describe AutomobileExpanded do
 
   it 'should inherit behavior from Automobile' do
     expect(AutomobileExpanded.superclass).to eq(Automobile)
+    expect(Automobile.subclasses).to eq([AutomobileExpanded])
   end
 
   it 'should print the same default data as Automobile' do
